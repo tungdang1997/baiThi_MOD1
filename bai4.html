@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="okCanvas" width="800px" height="800px" style="border: 1px solid"></canvas>
+<script>
+
+  class Circle {
+    radius;
+    color;
+
+    constructor(x, y) {
+      this.radius = x;
+      this.color = y;
+    }
+
+    getRadius() {
+      return this.radius
+    }
+
+    getArea() {
+      alert(Math.PI * this.radius * this.radius)
+    }
+
+    getDraw() {
+      let ctx = document.getElementById('okCanvas').getContext('2d');
+      ctx.arc(200, 200, this.radius, 0, 2 * Math.PI);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  let Circle1 = new Circle(200, 'blue');
+  Circle1.getDraw();
+</script>
+</body>
+</html>

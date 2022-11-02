@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let findMax = [1, 3, 9, 4, 8];
+    let max = findMax[0];
+    let max2 = findMax[1];
+    for (let i = 0; i < findMax.length; i++) {
+        if (findMax[i] > max) {
+            max = findMax[i];
+            for (let j = 0; j < findMax.length; j++) {
+                if (findMax[j] > max2 && findMax[j] < findMax[i]) {
+                    max2 = findMax[j]
+                }
+            }
+        }
+    }
+    document.write( 'Số lớn nhất: '+ max + "<br>"+ ' Số lớn thứ 2: ' + max2)
+</script>
+</body>
+</html>

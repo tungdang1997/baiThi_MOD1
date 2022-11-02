@@ -25,7 +25,7 @@
       alert(Math.PI * this.radius * this.radius)
     }
 
-    getDraw() {
+    getRender() {
       let ctx = document.getElementById('okCanvas').getContext('2d');
       ctx.arc(200, 200, this.radius, 0, 2 * Math.PI);
       ctx.fillStyle = this.color;
@@ -34,7 +34,7 @@
   }
 
   let Circle1 = new Circle(200, 'blue');
-  Circle1.getDraw();
+  Circle1.getRender();
 </script>
 </body>
 </html>
